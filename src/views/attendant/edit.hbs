@@ -1,0 +1,65 @@
+<div class="block mx-auto my-12 p-8 bg-white w-2/6 border border-gray-200 rounded-lg shadow-lg text-gray-800">
+
+  <h1 class="text-center text-3xl font-bold">EDIT ATTENDANT</h1>
+
+  {{#each acudiente}}
+
+  <form action="" method="POST" class="mt-4">
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="encargado" name="encargado" value="{{encargado}}" required>
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="ntriciclo" name="ntriciclo" value="{{ntriciclo}}" required>
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="identificación" name="identificacion" value="{{identificacion}}" required>
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="nombre" name="nombre" value="{{nombre}}" required>
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="apellido" name="apellido" value="{{apellido}}" required>
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="telefono" name="telefono" value="{{telefono}}" required>
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="dirección" name="direccion" value="{{direccion}}" required>
+
+    <input type="email" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="correo" name="correo" value="{{correo}}" required>
+
+    <input type="file" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="firma" name="firma" value="/uploads/{{firma}}" required>
+
+    <p class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white text-justify">
+        Mediante el presente documento usted autoriza al CENTRO COMERCIAL SANDIEGO P.H, para tratar la información
+        del menor de acuerdo con los intereses superiores del mismo, esta será recolectada y almacenada en nuestra
+        base de datos y sólo podrá ser utilizada para el logro de intereses superiores del menor como lo son la
+        educación, recreación, esparcimiento y celebración de eventos especiales tales como cumpleaños, navidad,
+        día de los niños, entre otros. 
+    </p>
+
+    <input type="radio" id="chequear" name="chequear" value="1" required>
+      <label for="chequear"><a style="color: red;" href="https://www.sandiego.com.co/politica-de-tratamiento-de-datos-personales">Aceptar tratamiento de datos</a></label>
+
+    <input type="time" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="hora de entrega" name="horaentrega" value="{{horaentrega}}" required>
+
+    <input type="time" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="hora de devolucion" name="horadevolucion" value="{{horadevolucion}}" required>
+
+    <button type="submit" class="rounded-md w-full text-lg text-white font-semibold p-2 my-3"
+    style="background:#212121;">Send</button>
+
+    {{#if error}}
+        <p class="text-red-500 font-bold text-lg my-3 text-center">{{error}}</p>
+    {{/if}}
+
+  </form>
+
+  {{/each}}
+
+</div>

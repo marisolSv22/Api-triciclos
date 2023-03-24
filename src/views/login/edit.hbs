@@ -1,0 +1,37 @@
+</div>
+
+<div class="block mx-auto my-12 p-8 bg-white w-2/6 border border-gray-200 rounded-lg shadow-lg text-gray-800">
+
+  <h1 class="text-center text-3xl font-bold">EDIT USER</h1>
+
+  {{#each usuario}}
+
+  <form action="" method="POST" class="mt-4">
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="nombre" name="nombre" value="{{nombre}}" required>
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="correo" name="correo" value="{{correo}}" required>
+
+    <input type="password" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="clave" name="clave" value="{{clave}}" required>
+
+    <select class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" class="form-select chosenrol_id" id="rol_id" name="rol_id" data-placeholder="- Seleccione Rol -"
+    onchange="change(this.id 'rol_id')" value="<%= typeof rol_id != 'undefined' ? rol_id : '' %" required>
+    <option value="1" >Administer</option>
+    <option value="2">User</option>
+    </select>
+
+    <button type="submit" class="rounded-md w-full text-lg text-white font-semibold p-2 my-3"
+    style="background:#212121;">Send</button>
+
+    {{#if error}}
+        <p class="text-red-500 font-bold text-lg my-3">{{error}}</p>
+    {{/if}}
+  </form>
+
+  {{/each}}
+
+</div>

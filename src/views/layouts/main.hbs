@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRUD Node.js</title>
+    
+    <!-- Tailwind CSS Link -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+
+    <!-- Fontawesome Link -->
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/styles.css">
+ 
+  </head>
+  <body class="bg-gray-200">
+  
+    <!-- Document body -->
+
+  
+  <div class="w-full block mx-auto my-3 shadow-lg px-12 py-5 text-white mt-auto shadow-xl  text-right ml-auto" style="background:#212121;">
+    <ul class="flex justify-end pt-1">
+    {{#if usuario}}
+    <li class="nav-item px-4">
+      <a href="/logout" class="nav-link font-semibold bg-red-500 hover:bg-red-700 py-3 px-4 rounded-md">Logout</a>
+    </li>
+    {{else}}
+    <li class="nav-item px-4">
+      <a href="/login" class="nav-link font-semibold border-2 border-white hover:bg-white hover:text-green-700 py-3
+            px-4 rounded-md">Login</a>
+    </li>
+    </ul>
+  </div>
+
+    {{/if}}
+
+    {{{ body }}}
+
+  </div>
+
+  </div>
+
+  {{!-- {{#if usuario}} --}}
+
+<div class="area"></div>
+  <nav class="main-menu">
+    <ul>
+      <li class="has-subnav">
+        <img class="mx-auto w-2/6 w-3/6" src="/img/descarga.png" alt="imagen_san_diego_50_años">
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class="fa fa-home fa-2x"></i>
+          <span class="nav-text">
+            Dashboard
+          </span>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a href="/event">
+          <i class="fa fa-calendar fa-2x"></i>
+          <span class="nav-text">
+            Events
+          </span>
+        </a>
+
+      </li>
+
+      <li class="has-subnav">
+        <a href="/attendant">
+          <i class="fa fa-user fa-2x"></i>
+          <span class="nav-text">
+            Attendant
+          </span>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a href="/create">
+          <i class="fa fa-gamepad fa-2x"></i>
+          <span class="nav-text">
+            Children
+          </span>
+        </a>
+
+      </li>
+      <li>
+        <a href="/rol">
+          <i class="fa fa-users fa-2x"></i>
+          <span class="nav-text">
+            Roles
+          </span>
+        </a>
+
+        {{!-- {{/if}} --}}
+
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  </body>
+
+</html>

@@ -1,0 +1,48 @@
+
+</div>
+
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+  <form class="form-inline my-2 my-lg-0">
+      <input class="rounded-md w-1/2 text-lg text-black font-semibold p-2 my-3"
+    style="background: white" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0 font-bold border border-gray-200" type="submit">Search</button>
+  </form>
+
+  <h1 class="text-center text-3xl font-bold">Rol</h1>
+
+  <div class="overflow-hidden shadow-xl sm:rounded-lg mt-4"
+  style="background:#212121;">
+
+    <table class="table-fixed w-full">
+      <thead>
+        <tr class="bg-black-100 text-white">
+          <th class="w-12 py-4 ...">ID</th>
+          <th class="w-28 py-4 ...">Name</th>
+          <th class="w-28 py-4 ...">User</th>
+          <th class="w-38 py-4 ...">Password</th>
+          <th class="w-10 py-4 ...">Rol</th>
+          <th class="w-28 py-4 ...">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each usuario}}
+        <tr class="bg-white text-black">
+          <td class="py-3 text-center">{{id}}</td>
+          <td class="py-3 text-center">{{nombre}}</td>
+          <td class="py-3 text-center">{{correo}}</td>
+          <td class="py-3 text-center">{{clave}}</td>
+          <td class="py-3 text-center">{{rol_id}}</td>
+          <td class="py-3 text-center"><form action="/user/delete" method="POST" class="mx-2">
+            <input type="hidden" value="{{id}}" name="id">
+            <a href="/user/edit/{{id}}" class="bg-white-500 text-black px-3 py-1 rounded-sm">
+            <i class="fas fa-pen"></i></a>
+            <button class="bg-black-400 text-black px-3 py-1 rounded-sm" type="submit">
+            <i class="fas fa-trash"></i></button>
+            </form></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

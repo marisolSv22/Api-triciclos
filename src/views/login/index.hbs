@@ -1,0 +1,31 @@
+<div class="block mx-auto my-12 p-8 bg-white w-2/6 border border-gray-200 rounded-lg shadow-lg text-gray-800">
+
+  <h1 class="text-center text-3xl font-bold">LOGIN</h1>
+
+  <form action="" method="POST" class="mt-4">
+
+    <input type="text" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="correo" name="correo" id="correo" autofocus required>
+
+    <input type="password" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-500 
+      p-2 my-2 focus:bg-white" placeholder="clave" name="clave" id="clave" required>
+
+    <button type="submit" class="rounded-md w-full text-lg text-white font-semibold p-2 my-3"
+    style="background:#212121">Get into</button>
+
+    {{#if error}}
+        <p class="text-red-500 font-bold text-lg my-3 text-center">{{error}}</p>
+    {{/if}}
+
+    <div class="mx-auto w-2/6">
+        <label class="text-lg text-black font-semibold p-2 my-3 w-full" for="scales">remind me</label>
+        <input type="checkbox" id="scales" name="scales" defaultChecked>
+    </div>
+
+    <div class="mx-auto w-2/6 text-center">
+        <ul><a href="/register">¿You want to register?</a></ul>
+    </div>
+
+  </form>
+
+</div>

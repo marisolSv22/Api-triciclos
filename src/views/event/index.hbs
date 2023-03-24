@@ -1,0 +1,43 @@
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+  <form class="form-inline my-2 my-lg-0">
+      <input class="rounded-md w-1/2 text-lg text-black font-semibold p-2 my-3"
+    style="background: white" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0 font-bold" type="submit">Search</button>
+    </form>
+
+  <h1 class="text-center text-3xl font-bold">Events</h1>
+
+  <div class="overflow-hidden shadow-xl sm:rounded-lg mt-4"
+  style="background:#212121;">
+
+    <table class="table-fixed w-full">
+      <thead>
+        <tr class="bg-black-100 text-white">
+          <th class="w-20 py-4 ...">ID</th>
+          <th class="w-20 py-4 ...">Name</th>
+          <th class="w-28 py-4 ...">Description</th>
+          <th class="w-20 py-4 ...">State</th>
+          <th class="w-28 py-4 ...">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each evento}}
+        <tr class="bg-white text-black">
+          <td class="py-3 text-center">{{id}}</td>
+          <td class="py-3 text-center">{{nombre}}</td>
+          <td class="py-3 text-center">{{descripcion}}</td>
+          <td class="py-3 text-center">{{estado_id}}</td>
+          <td class="py-3 text-center"><form action="/event/delete" method="POST" class="mx-2">
+            <input type="hidden" value="{{id}}" name="id">
+            <a href="/event/edit/{{id}}" class="bg-white-500 text-black px-3 py-1 rounded-sm">
+            <i class="fas fa-pen"></i></a>
+            <button class="bg-black-400 text-black px-3 py-1 rounded-sm" type="submit">
+            <i class="fas fa-trash"></i></button>
+            </form></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
